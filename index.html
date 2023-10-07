@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheet</title>
+
+    <link rel="shortcut icon" href="./sheets.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Amatic+SC&family=Cinzel&family=Cookie&family=Crimson+Text&family=Dancing+Script&family=Foldit&family=Great+Vibes&family=Inconsolata&family=Lato&family=Lobster&family=Major+Mono+Display&family=Mogra&family=Oswald&family=Oxygen+Mono&family=Pacifico&family=Playfair+Display&family=Poppins:wght@300;400&family=Raleway:wght@300;400&family=Roboto+Slab&family=Roboto:wght@300&family=Rubik&family=Satisfy&family=Shadows+Into+Light&family=Smokum&family=Ubuntu+Mono&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <!-- menu bar -->
+    <nav>
+        <div class="logo">
+            <img src="./sheets.png" alt="sheet- logo">
+        </div>
+        <div class="list">
+            <ul>
+                <li id="file-menu"><a href="#">File</a></li>
+                <li class="active-menu" id="home-menu"><a href="#">Home</a></li>
+                <li class="nav-content"><a href="#">Insert</a></li>
+                <li class="nav-content"><a href="#">Layout</a></li>
+                <li id="help-box-btn"><a href="#" title="help ?"><span class="material-symbols-outlined">help</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- menu container-->
+    <div class="menus">
+        <!-- home -->
+        <div class="home">
+            <div class="cutcpy">
+                <button id="cut"><span class="material-icons" title="cut">content_cut</span></button>
+                <button id="cpy"><span class="material-icons" title="copy">content_copy</span></button>
+                <button id="pst"><span class="material-icons" title="paste">content_paste</span></button>
+            </div>
+            <div class="text-dec">
+                <button id="bold" title="bold">B</button>
+                <button id="italic" title="italic">I</button>
+                <button id="underline" title="underline">U</button>
+                <button id="line-through" title="line-through">S</button>
+            </div>
+            <div class="fonts">
+                <select name="fontFamily" id="family">
+                    <option value="Arial, sans-serif" id="default">Arial</option>
+                </select>
+                <select name="fontSize" id="size">
+                    <option value="14">16</option>
+                </select>
+            </div>
+            <div class="text-align">
+                <button id="left" class="active" title="left-align"><span
+                        class="material-icons align">format_align_left</span></button>
+                <button id="center" title="center-align"><span
+                        class="material-icons align">format_align_center</span></button>
+                <button id="right" title="right-align"><span
+                        class="material-icons align">format_align_right</span></button>
+                <button id="justify" title="justify-align"><span
+                        class="material-icons align">format_align_justify</span></button>
+            </div>
+            <div class="colors">
+                <label for="txt-color" class="material-icons" title="font-color">format_color_text</label>
+                <input type="color" id="txt-color" class="fills">
+                <label for="bg" class="material-icons" title="background-color">format_color_fill</span></label>
+                <input type="color" id="bg" class="fills">
+            </div>
+            <div class="file">
+                <button id="download"><span class="material-icons">cloud_download</span></button>
+                <label for="open" id="open-label"><span class="material-icons">cloud_upload</span></label>
+                <input type="file" id="open" accept=".json">
+                <button id="save"><span class="material-icons">save</span></button>
+            </div>
+        </div>
+
+        <!-- help -->
+        <div class="helpbox">
+            <button id="close-btn"><span class="material-symbols-outlined" title="close">close</span></button>
+            <h2>Help?</h2>
+            <form action="mailto:recipient@example.com" method="get" id="contact">
+                <input type="email" name="email" placeholder="Your Mail" id="feed">
+                <textarea name="body" rows="5" cols="40" placeholder="Post your queries here!"></textarea>
+                <button type="submit" id="send-mail">Send <span class="material-symbols-outlined">send</span></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- function bar -->
+    <div class="fx">
+        <div class="cell"></div>
+        <div class="function">
+            <span class="material-symbols-outlined">function</span>
+            <input type="text">
+        </div>
+    </div>
+
+    <!-- sheet -->
+    <div class="tab">
+        <table id="myTable">
+            <thead>
+                <tr id="table-heading-row">
+                    <th class="empty">SNO</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- footer -->
+    <div class="foot">
+        <div class="addSheet">
+            <button id="add-btn" title="add-new-sheet"><span class="material-icons">post_add</span></button>
+        </div>
+        <div class="sheets">
+            <button class="active-btn default" id="0">Sheet 1</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
